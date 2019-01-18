@@ -6,7 +6,7 @@
     <description>Recent content on The DIY Blogger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jan 2019 13:22:41 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.thediyblogger.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>How to blog</title>
       <link>https://www.thediyblogger.com/blog/how-to-blog/</link>
-      <pubDate>Tue, 01 Jan 2019 13:22:41 -0500</pubDate>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.thediyblogger.com/blog/how-to-blog/</guid>
       <description>BLOGGING 101 Lets start with the basics of Blogging. The word blog originally comes from the term
@@ -23,9 +23,21 @@ You may have heard of WordPress, which is one of the most popular blogging platf
     </item>
     
     <item>
+      <title>Introduction to SEO</title>
+      <link>https://www.thediyblogger.com/blog/introduction-to-seo/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.thediyblogger.com/blog/introduction-to-seo/</guid>
+      <description>Welcome to my first post on SEO.
+Many customers feel that if you build a beautiful website, then customers will come pouring through the door.
+In reality, there is more to website design than just pretty fonts, colors, and great imagery.
+Users who search for certain keywords on Google will likely find your website only if you rank high on Google, giving you the opportunity to convert those users into potential paying customers.</description>
+    </item>
+    
+    <item>
       <title>How to Build Links to Your Website</title>
       <link>https://www.thediyblogger.com/blog/how-to-build-links-to-your-website/</link>
-      <pubDate>Wed, 26 Dec 2018 15:02:28 -0500</pubDate>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.thediyblogger.com/blog/how-to-build-links-to-your-website/</guid>
       <description>By this time, you should have already optimized your website with the Basic SEO techniques I outlined in my previous post.
@@ -37,7 +49,7 @@ You want your website to get as much high quality juice as possible to boost you
     <item>
       <title>Why great Web Design is more than just pretty pictures</title>
       <link>https://www.thediyblogger.com/blog/why-great-web-design-is-more-than-just-pretty-pictures/</link>
-      <pubDate>Mon, 24 Dec 2018 13:51:42 -0500</pubDate>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.thediyblogger.com/blog/why-great-web-design-is-more-than-just-pretty-pictures/</guid>
       <description>But, what is a Beautiful Web Design?
@@ -48,7 +60,7 @@ Web Design constitutes many aspects. These are the qualities we think are import
     <item>
       <title>Why your business needs a CDN</title>
       <link>https://www.thediyblogger.com/blog/why-your-business-needs-a-cdn/</link>
-      <pubDate>Sat, 22 Dec 2018 13:22:41 -0500</pubDate>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.thediyblogger.com/blog/why-your-business-needs-a-cdn/</guid>
       <description>For example, lets say your website was hosted on a server in Atlanta GA. Then, whenever your customer requested your website that did not use a CDN, the request would always come to your server in Atlanta. Local customers may have a decent experience because they are local, but requests from customers on the west coast would have to travel the span of the US. Even worse for global customers.</description>
@@ -57,7 +69,7 @@ Web Design constitutes many aspects. These are the qualities we think are import
     <item>
       <title>Introduction to SSL</title>
       <link>https://www.thediyblogger.com/blog/introduction-to-ssl/</link>
-      <pubDate>Sun, 16 Dec 2018 13:38:48 -0500</pubDate>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.thediyblogger.com/blog/introduction-to-ssl/</guid>
       <description>SSL stands for Secure Socket Layer. It&amp;rsquo;s actually a deprecated technology, now replaced by a newer acronym - TLS. TLS stands for Transport Layer Security.
@@ -68,23 +80,11 @@ When you visit your bank website, or these days even Facebook and Google, you wi
     <item>
       <title>Setting up DNS</title>
       <link>https://www.thediyblogger.com/blog/setting-up-dns/</link>
-      <pubDate>Sun, 09 Dec 2018 13:22:41 -0500</pubDate>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.thediyblogger.com/blog/setting-up-dns/</guid>
       <description>You should be familiar with the Address Bar in your browser. It looks something like this:
   Address Bar   When your users go to a URL such as &amp;ldquo;www.drawbuildplay.com&amp;rdquo;, the request will go to a DNS server which routes the request to the correct place where your website is hosted. Think of it like regular mail you send through the post office. You send a letter marked with the recipients address.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to SEO</title>
-      <link>https://www.thediyblogger.com/blog/introduction-to-seo/</link>
-      <pubDate>Sat, 08 Dec 2018 13:22:41 -0500</pubDate>
-      
-      <guid>https://www.thediyblogger.com/blog/introduction-to-seo/</guid>
-      <description>Welcome to my first post on SEO.
-Many customers feel that if you build a beautiful website, then customers will come pouring through the door.
-In reality, there is more to website design than just pretty fonts, colors, and great imagery.
-Users who search for certain keywords on Google will likely find your website only if you rank high on Google, giving you the opportunity to convert those users into potential paying customers.</description>
     </item>
     
   </channel>

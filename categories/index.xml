@@ -6,16 +6,26 @@
     <description>Recent content in Categories on The DIY Blogger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.thediyblogger.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Web Development</title>
-      <link>https://www.thediyblogger.com/categories/web-development/</link>
-      <pubDate>Tue, 01 Jan 2019 13:22:41 -0500</pubDate>
+      <title>Blogging</title>
+      <link>https://www.thediyblogger.com/categories/blogging/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.thediyblogger.com/categories/web-development/</guid>
+      <guid>https://www.thediyblogger.com/categories/blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seo</title>
+      <link>https://www.thediyblogger.com/categories/seo/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.thediyblogger.com/categories/seo/</guid>
       <description></description>
     </item>
     
