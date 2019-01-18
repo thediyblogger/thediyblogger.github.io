@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.thediyblogger.com/blog/how-to-blog/</loc>
+    <lastmod>2019-01-01T13:22:41-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.thediyblogger.com/blog/how-to-build-links-to-your-website/</loc>
     <lastmod>2018-12-26T15:02:28-05:00</lastmod>
   </url>
@@ -34,7 +39,7 @@
   
   <url>
     <loc>https://www.thediyblogger.com/blog/</loc>
-    <lastmod>2018-12-26T15:02:28-05:00</lastmod>
+    <lastmod>2019-01-01T13:22:41-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -44,18 +49,14 @@
   </url>
   
   <url>
-    <loc>https://www.thediyblogger.com/blog/how-to-blog/</loc>
-  </url>
-  
-  <url>
     <loc>https://www.thediyblogger.com/</loc>
-    <lastmod>2018-12-26T15:02:28-05:00</lastmod>
+    <lastmod>2019-01-01T13:22:41-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.thediyblogger.com/categories/web-development/</loc>
-    <lastmod>2018-12-26T15:02:28-05:00</lastmod>
+    <lastmod>2019-01-01T13:22:41-05:00</lastmod>
     <priority>0</priority>
   </url>
   
