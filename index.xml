@@ -40,7 +40,7 @@ Users who search for certain keywords on Google will likely find your website on
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.thediyblogger.com/blog/how-to-build-links-to-your-website/</guid>
-      <description>By this time, you should have already optimized your website with the Basic SEO techniques I outlined in my previous post.
+      <description>By this time, you should have already optimized your website with the Basic SEO Techniques I outlined in my previous post.
 Never fear. There are a few things we can do to get started. But before we do, here is a term we will refer to a lot. &amp;ldquo;Link Juice&amp;rdquo;. Link juice is the amount of &amp;ldquo;juice&amp;rdquo; that one page can send to another.
 Global Popularity
 You want your website to get as much high quality juice as possible to boost your page rank.</description>
@@ -85,6 +85,15 @@ When you visit your bank website, or these days even Facebook and Google, you wi
       <guid>https://www.thediyblogger.com/blog/setting-up-dns/</guid>
       <description>You should be familiar with the Address Bar in your browser. It looks something like this:
   Address Bar   When your users go to a URL such as &amp;ldquo;www.drawbuildplay.com&amp;rdquo;, the request will go to a DNS server which routes the request to the correct place where your website is hosted. Think of it like regular mail you send through the post office. You send a letter marked with the recipients address.</description>
+    </item>
+    
+    <item>
+      <title>Check Your Blog&#39;s SEO - Free SEO Analyzer Tool</title>
+      <link>https://www.thediyblogger.com/seo-analyzer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.thediyblogger.com/seo-analyzer/</guid>
+      <description></description>
     </item>
     
   </channel>
