@@ -124,7 +124,7 @@ if (!doNotTrack) {
             function signup(){
 
 
-                var CLIENT_ID = "5022942441869717972";
+                var CLIENT_ID = "5034711914840639840";
 
                 AUTHORIZATION_URL = "https://api.pinterest.com/oauth/" + 
                     "?response_type=code" + 
@@ -330,8 +330,15 @@ if (!doNotTrack) {
             function analyze(){
                 url = buildEndpoint("/report");
 
+                token = JSON.parse(localStorage.getItem("pinkarma_token")).token
+
                 
-                fetch(url)
+                fetch(url, 
+                    { 
+                        'headers': {
+                            'Authorization': token
+                        }
+                    })
                 .then(response => response.json())
                 .then(json => {
                   renderResults(json);
@@ -341,9 +348,14 @@ if (!doNotTrack) {
 
             function renderResults(report) {
                
+                $('#avatar').attr("src", report.profile.image['60x60']['url'])
                     
                 $('#current_score').text(report.engagement_score.score);
                 $('#current_score_pct').text(report.engagement_score.percentage);
+
+                profileName = report.profile.name;
+
+                $('#missionHeader').text(profileName);
 
                 
                 $("#recommendations").empty();
@@ -351,9 +363,6 @@ if (!doNotTrack) {
                     carouselitem = $("<div>");
                     carouselitem.addClass("carousel-item");
                     if (index == 0) carouselitem.addClass("active");
-
-                    header = $("<header>");
-                    header.html("<h2>Your Missions</h2>");
 
                     metric = $("<header>");
                     metric.html("<h4>" + r.metric + "</h4>");
@@ -377,7 +386,6 @@ if (!doNotTrack) {
                     link.addClass("button");
                     link.text("Learn More");
 
-                    carouselitem.append(header);
                     carouselitem.append(metric);
                     carouselitem.append(message);
                     carouselitem.append(impact);
@@ -450,14 +458,31 @@ if (!doNotTrack) {
                         name_cell.append(icon);
                     }
 
+                    if (board.privacy != "public"){
+                        
+                        icon = createIcon("fa-lock", "Secret Board", true);
+                        name_cell.append(icon);
+                    }
+
                     row = $("<tr>")
                     row.append(name_cell);
                     row.append($("<td>").text(board.counts.pins + " pins"));
                     row.append($("<td>").text(board.counts.followers + " followers"));
-                    row.append($("<td>").text(board.counts.repins + " repins"));
-                    row.append($("<td>").text(board.counts.virality.toFixed(1)));
-                    row.append($("<td>").text(board.counts.engagement.toFixed(1)));
-                    row.append($("<td>").text(board.counts.quality.toFixed(0)));
+
+                    if (board.stats != "in_progress"){
+                        row.append($("<td>").text(board.counts.repins + " repins"));
+                        row.append($("<td>").text(board.counts.virality.toFixed(1)));
+                        row.append($("<td>").text(board.counts.engagement.toFixed(1)));
+                        row.append($("<td>").text(board.counts.quality.toFixed(0)));
+                    }
+                    else{
+                        
+                        row.append($("<td>").text("-"));
+                        row.append($("<td>").text("-"));
+                        row.append($("<td>").text("-"));
+                        row.append($("<td>").text("-"));
+                    }
+
                     $('#boardRows').append(row);
 
                         
@@ -532,14 +557,22 @@ if (!doNotTrack) {
                 </li>
             
         
-
-
+        <li class="active">
+            <a href='/dashboard'>PIN KARMA</a>
+        </li>
     </ul>
 
     <ul class="icons">
+        
         <li id="btnLogin"><button type="button" class="button small" data-toggle="modal" data-target="#loginModal">Log In</button></li>
         <li id="btnFreeTrial"><button type="button" class="button primary small" onclick="signup();">Free Trial</button></li>
-        <li id="btnLogout" style="display:none;"><a href="/dashboard"><button type="button" class="button small" onclick="logout();">Log Out</button></a></li>
+        <li id="btnLogout" style="display:none;">
+            <button type="button" class="button small" onclick="logout(); return false;">
+                <img id="avatar" src="/images/avatar.png" alt="Avatar" class="avatar">
+                Log Out
+            </button>
+        </li>
+        
     </ul>
 </nav>
 
@@ -614,6 +647,9 @@ if (!doNotTrack) {
                                 </div>
                                 <div class="col-9">
                                     <div class="box">
+                                        <header>
+                                            <h2 id="missionHeader">Your Missions:</h2>
+                                        </header>
                                         <div class="carousel slide" data-ride="carousel">
                                             <div id="recommendations" class="carousel-inner">
                                                 
@@ -806,12 +842,12 @@ if (!doNotTrack) {
 
         <section>
             <div class="field">
-                <label>MY STORY</label>
+                <label>Who is The DIY Blogger?</label>
                 <p>
-                    I am an Atlanta based software developer, who specializes in Web Design. Through my blog, learn how to build and monetize your own blog and how to start to generate traffic to your website using SEO and SEM techniques.
+                    Amit Gandhi (the expert behind the name The DIY Blogger) has specialized in software and web design for almost 20 years. Throughout his career he has built a number of public and private websites from the ground up, as well as lead many project teams in the Cloud Industry. With this latest venture, Amit aims to empower users who want to learn how to build and monetize their own website/blog and start to rapidly generate traffic to their website using both traditional SEO/SEM techniques as well as Social Media Marketing (especially Pinterest).
                 </p>
                 <p>
-                    I will share insights and approaches I take building this site, <a href="https://www.thediyblogger.com">The DIY Blogger</a>, and its sibling site <a href="https://www.drawbuildplay.com">DrawBuildPlay</a>.
+                    Amit himself is employing his shared techniques in building this site, <a href="https://www.thediyblogger.com">The DIY Blogger</a>, and his other website <a href="https://www.drawbuildplay.com">DrawBuildPlay</a>.
                 </p>
             </div>
         </section>
