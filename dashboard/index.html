@@ -98,9 +98,8 @@ if (!doNotTrack) {
                 if (loggedIn()){
                     
                     
+                    $("#loading").show();
                     analyzePinterest();   
-
-                    
                 }
                 else{
                     
@@ -109,6 +108,7 @@ if (!doNotTrack) {
             }
 
             function hideAll(){
+                $("#loading").hide();
                 $('#signup').hide();
                 $('#signupForm').hide();
                 $("#profiletResults").hide();
@@ -476,10 +476,7 @@ if (!doNotTrack) {
                     }
                     else{
                         
-                        row.append($("<td>").text("-"));
-                        row.append($("<td>").text("-"));
-                        row.append($("<td>").text("-"));
-                        row.append($("<td>").text("-"));
+                        row.append($("<td colspan='4' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
                     }
 
                     $('#boardRows').append(row);
@@ -488,6 +485,8 @@ if (!doNotTrack) {
                 });
 
                 $('[data-toggle="tooltip"]').tooltip()
+
+                $("#loading").hide();
                 $("#engagementResults").show();
                 $("#profileResults").show();
                 $("#boardResults").show();
@@ -631,6 +630,19 @@ if (!doNotTrack) {
                                     </li>
                                 </ul>
                             </form>
+                        </section>
+
+                        <section id="loading" style="display: none;">
+                            <header class="major">
+                                <h1>Pin Karma</h1>
+                                <p>Hang tight while we check out your pins.</p>
+                            </header>
+
+                            <div class="row">
+                                <div class="col-12 icon">
+                                    <img src="/images/loading.svg" alt="Loading" />
+                                </div>
+                            </div>
                         </section>
 
                         
