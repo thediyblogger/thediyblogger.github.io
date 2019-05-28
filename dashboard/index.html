@@ -4,7 +4,7 @@
 
 <html lang='en'>
     <head>
-        <title>Pinterest Dashboard &middot; The DIY Blogger</title>
+        <title>PinKarma Dashboard &middot; The DIY Blogger</title>
         <meta name="description" content="">
         
 <script type="application/javascript">
@@ -379,6 +379,7 @@ if (!doNotTrack) {
                     impact = $("<p>");
                     impact.html("<strong>Impact: " + r.impact + "</strong>");
 
+
                     link = $("<a>");
                     link.attr("href", r.link);
                     link.attr("target", "_blank");
@@ -388,7 +389,7 @@ if (!doNotTrack) {
                     carouselitem.append(metric);
                     carouselitem.append(message);
                     carouselitem.append(impact);
-                    carouselitem.append(link);
+                    
 
                     $("#recommendations").append(carouselitem);
                 });
@@ -472,11 +473,11 @@ if (!doNotTrack) {
                         row.append($("<td>").text(board.counts.repins + " repins"));
                         row.append($("<td>").text(board.counts.virality.toFixed(1)));
                         row.append($("<td>").text(board.counts.engagement.toFixed(1)));
-                        row.append($("<td>").text(board.counts.quality.toFixed(0)));
+                        
                     }
                     else{
                         
-                        row.append($("<td colspan='4' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
+                        row.append($("<td colspan='3' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
                     }
 
                     $('#boardRows').append(row);
@@ -716,11 +717,7 @@ if (!doNotTrack) {
                                                             Engagement Score
                                                         </span>
                                                    </th>
-                                                   <th>
-                                                        <span data-toggle="tooltip" data-placement="right" title="SEO vs Engagement vs Broken Pins">
-                                                            Quality Score
-                                                        </span>
-                                                   </th>
+                                                   
                                                 </tr>
                                             </thead>
                                             <tbody id="boardRows">
