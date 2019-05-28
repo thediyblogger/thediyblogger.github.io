@@ -97,5 +97,17 @@ When you visit your bank website, or these days even Facebook and Google, you wi
   Address Bar   When your users go to a URL such as &amp;ldquo;www.drawbuildplay.com&amp;rdquo;, the request will go to a DNS server which routes the request to the correct place where your website is hosted. Think of it like regular mail you send through the post office. You send a letter marked with the recipients address.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://www.thediyblogger.com/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.thediyblogger.com/blog/</guid>
+      <description>The DIY Blogger / DrawBuildPlay, LLC Privacy Policy
+This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from https://www.thediyblogger.com (the “Site”).
+PERSONAL INFORMATION WE COLLECT
+When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site.</description>
+    </item>
+    
   </channel>
 </rss>
