@@ -4,7 +4,7 @@
 
 <html lang='en'>
     <head>
-        <title>PinKarma Dashboard &middot; The DIY Blogger</title>
+        <title>Pinterest Dashboard &middot; The DIY Blogger</title>
         <meta name="description" content="">
         
 <script type="application/javascript">
@@ -306,31 +306,6 @@ if (!doNotTrack) {
                 return !!getSession();
             }
 
-
-            function forceRefresh(){
-                url = buildEndpoint("/report");
-                token = JSON.parse(localStorage.getItem("pinkarma_token")).token
-
-                
-                fetch(
-                    url, 
-                    {
-                        headers: {
-                          'Accept': 'application/json',
-                          'Content-Type': 'application/json',
-                          'Authorization': token
-                        },
-                        method: 'delete' 
-                    })
-                .then(function(response){
-                    if (response.status == 202) { return response.json() }
-                    else if (response.status == 401) { logout(); }
-                    else { throw Error(`Request rejected with status ${res.status}`); }
-                })
-                .then(json => analyze())
-                .catch(error => console.error);
-            }
-
             function analyzePinterest(){
                 $("#signup").hide();
                 $("#engagementResults").hide();
@@ -353,6 +328,7 @@ if (!doNotTrack) {
 
             function analyze(){
                 url = buildEndpoint("/report");
+
                 token = JSON.parse(localStorage.getItem("pinkarma_token")).token
 
                 
@@ -362,17 +338,15 @@ if (!doNotTrack) {
                             'Authorization': token
                         }
                     })
-                .then(function(response){
-                    if (response.status == 200) { return response.json() }
-                    else if (response.status == 401) { logout(); }
-                    else { throw Error(`Request rejected with status ${res.status}`); }
-                })
-                .then(json => renderResults(json))
-                .catch(error => console.error);
+                .then(response => response.json())
+                .then(json => {
+                  renderResults(json);
+                });
             }
 
 
             function renderResults(report) {
+               
                 $('#avatar').attr("src", report.profile.image['60x60']['url'])
                     
                 $('#current_score').text(report.engagement_score.score);
@@ -405,7 +379,6 @@ if (!doNotTrack) {
                     impact = $("<p>");
                     impact.html("<strong>Impact: " + r.impact + "</strong>");
 
-
                     link = $("<a>");
                     link.attr("href", r.link);
                     link.attr("target", "_blank");
@@ -415,7 +388,7 @@ if (!doNotTrack) {
                     carouselitem.append(metric);
                     carouselitem.append(message);
                     carouselitem.append(impact);
-                    
+                    carouselitem.append(link);
 
                     $("#recommendations").append(carouselitem);
                 });
@@ -499,11 +472,11 @@ if (!doNotTrack) {
                         row.append($("<td>").text(board.counts.repins + " repins"));
                         row.append($("<td>").text(board.counts.virality.toFixed(1)));
                         row.append($("<td>").text(board.counts.engagement.toFixed(1)));
-                        
+                        row.append($("<td>").text(board.counts.quality.toFixed(0)));
                     }
                     else{
                         
-                        row.append($("<td colspan='3' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
+                        row.append($("<td colspan='4' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
                     }
 
                     $('#boardRows').append(row);
@@ -682,9 +655,6 @@ if (!doNotTrack) {
                                         <h1 id="current_score"></h1>
                                         <p>Total Points (<span id="current_score_pct"></span>%)</p>
                                     </header>
-                                    <div>
-                                        
-                                    </div>
                                 </div>
                                 <div class="col-9">
                                     <div class="box">
@@ -746,7 +716,11 @@ if (!doNotTrack) {
                                                             Engagement Score
                                                         </span>
                                                    </th>
-                                                   
+                                                   <th>
+                                                        <span data-toggle="tooltip" data-placement="right" title="SEO vs Engagement vs Broken Pins">
+                                                            Quality Score
+                                                        </span>
+                                                   </th>
                                                 </tr>
                                             </thead>
                                             <tbody id="boardRows">
@@ -899,8 +873,9 @@ if (!doNotTrack) {
 <div id="copyright">
     <ul>
     	<li>&copy; The DIY Blogger</li>
-    	<li><a href="/blog/privacy-policy" title="Privacy Policy">privacy policy</a></li>
-    	<li><a href="/blog/attributions" title="Attributions">attributions</a></li>
+    	<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+    	<li>Hugo Port: <a href="https://curtistimson.co.uk">curttimson</a></li>
+    	<li>A <a href="https://www.drawbuildplay.com" title="DrawBuildPlay">DrawBuildPlay</a> Website</li>
 	</ul>
 </div>
 
