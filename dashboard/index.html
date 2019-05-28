@@ -306,6 +306,31 @@ if (!doNotTrack) {
                 return !!getSession();
             }
 
+
+            function forceRefresh(){
+                url = buildEndpoint("/report");
+                token = JSON.parse(localStorage.getItem("pinkarma_token")).token
+
+                
+                fetch(
+                    url, 
+                    {
+                        headers: {
+                          'Accept': 'application/json',
+                          'Content-Type': 'application/json',
+                          'Authorization': token
+                        },
+                        method: 'delete' 
+                    })
+                .then(function(response){
+                    if (response.status == 202) { return response.json() }
+                    else if (response.status == 401) { logout(); }
+                    else { throw Error(`Request rejected with status ${res.status}`); }
+                })
+                .then(json => analyze())
+                .catch(error => console.error);
+            }
+
             function analyzePinterest(){
                 $("#signup").hide();
                 $("#engagementResults").hide();
@@ -328,7 +353,6 @@ if (!doNotTrack) {
 
             function analyze(){
                 url = buildEndpoint("/report");
-
                 token = JSON.parse(localStorage.getItem("pinkarma_token")).token
 
                 
@@ -338,15 +362,17 @@ if (!doNotTrack) {
                             'Authorization': token
                         }
                     })
-                .then(response => response.json())
-                .then(json => {
-                  renderResults(json);
-                });
+                .then(function(response){
+                    if (response.status == 200) { return response.json() }
+                    else if (response.status == 401) { logout(); }
+                    else { throw Error(`Request rejected with status ${res.status}`); }
+                })
+                .then(json => renderResults(json))
+                .catch(error => console.error);
             }
 
 
             function renderResults(report) {
-               
                 $('#avatar').attr("src", report.profile.image['60x60']['url'])
                     
                 $('#current_score').text(report.engagement_score.score);
@@ -656,6 +682,9 @@ if (!doNotTrack) {
                                         <h1 id="current_score"></h1>
                                         <p>Total Points (<span id="current_score_pct"></span>%)</p>
                                     </header>
+                                    <div>
+                                        
+                                    </div>
                                 </div>
                                 <div class="col-9">
                                     <div class="box">
