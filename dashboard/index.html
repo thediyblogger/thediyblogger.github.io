@@ -111,7 +111,6 @@ if (!doNotTrack) {
                 $("#loading").hide();
                 $('#signup').hide();
                 $('#signupForm').hide();
-                $("#profiletResults").hide();
                 $("#engagementResults").hide();
                 $("#boardResults").hide();
                 $("#boardPins").hide();
@@ -377,12 +376,14 @@ if (!doNotTrack) {
                     
                 $('#current_score').text(report.engagement_score.score);
                 $('#current_score_pct').text(report.engagement_score.percentage);
+                $("#badges").empty();
 
                 
 
                 profileName = report.profile.name;
 
                 $('#missionHeader').text(profileName);
+                $("#carousel").empty();
                 $("#carousel").empty();
 
 
@@ -394,6 +395,8 @@ if (!doNotTrack) {
                 carouselitem = $("<div>");
                 carouselitem.addClass("carousel-item");
                 carouselitem.addClass("active");
+
+                var num_badges_earned = 0;
 
                 $.each(report.levels, function(level, metrics){
                     level_header = $("<header>");
@@ -432,6 +435,7 @@ if (!doNotTrack) {
                     carouselitem.append(level_header);
 
                     if (level_complete){
+                        num_badges_earned++;
                         
                         badge = $("<img>")
 
@@ -463,6 +467,7 @@ if (!doNotTrack) {
 
                 })
                 recommendationsElement.append(carouselitem);
+                $("#currentLevel").text("BADGES: " + num_badges_earned);
 
                 
                 $.each(report.recommendations, function(index, r){
@@ -546,25 +551,6 @@ if (!doNotTrack) {
 
 
                 
-                $("#profileScanResults").empty();
-                $.each(report.profile.scan, function(index, result){
-
-                    if (result.achieved){
-                        metric = createIcon("fa-check", result.metric, false);
-                    }
-                    else{
-                        metric = createIcon("fa-times", result.metric, false);
-                    }
-                    
-                    row = $("<tr>")
-                    profile_cell = $("<td>");
-                    profile_cell.append(createTooltip(result.details, false, metric));
-                    profile_cell.append($("<span>").html(" " + result.metric))
-                    row.append(profile_cell);
-                    $('#profileScanResults').append(row);
-                });
-
-                
                 $("#boardRows").empty();
                 $.each(report.boards, function (index, board){
 
@@ -639,7 +625,6 @@ if (!doNotTrack) {
 
                 $("#loading").hide();
                 $("#engagementResults").show();
-                $("#profileResults").show();
                 $("#boardResults").show();
 
                 $("#btnAnalyze").html("Analyze Pinterest");
@@ -810,7 +795,7 @@ if (!doNotTrack) {
                         <section id="engagementResults" style="display: none;">
                             <div class="row">
                                 <div class="col-3 box">
-                                    <h2 id="currentLevel">BADGES: 1</h2>
+                                    <h2 id="currentLevel"></h2>
                                     
                                     <header class="activity_score">
                                         <h1 id="current_score"></h1>
@@ -841,27 +826,6 @@ if (!doNotTrack) {
                             </div>
                         </section>
 
-                        
-                        <section  id="profileResults"  style="display:none;">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h2>Profile</h2>
-                                    <div class="table-wrapper">
-                                        <a name="profile" style="display:none;"></a>
-                                        <table class="alt">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="profileScanResults">
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>    
 
                         
                         <section id="boardResults" style="display: none;">
