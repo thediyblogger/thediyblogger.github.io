@@ -111,6 +111,7 @@ if (!doNotTrack) {
                 $("#loading").hide();
                 $('#signup').hide();
                 $('#signupForm').hide();
+                $('#loginSection').hide();
                 $("#engagementResults").hide();
                 $("#boardResults").hide();
                 $("#boardPins").hide();
@@ -229,6 +230,11 @@ if (!doNotTrack) {
                 token = JSON.parse(localStorage.getItem("pinkarma_token"));
 
                 return token;
+            }
+
+            function showLogin(){
+                hideAll();
+                $('#loginSection').show();
             }
 
             function login(){
@@ -398,13 +404,23 @@ if (!doNotTrack) {
 
                 var num_badges_earned = 0;
 
-                $.each(report.levels, function(level, metrics){
+                
+                level_keys = Object.keys(report.levels);
+                sorted_levels = level_keys.sort(function(a, b){
+                    return report.levels[a].order - report.levels[b].order
+                });
+
+                for (i = 0; i < sorted_levels.length; i++){
+                    level = sorted_levels[i];
+                    metrics = report.levels[level]
+
                     level_header = $("<header>");
                     level_header.html("<h4>" + level + "</h4>");
 
                     level_metrics = $("<p>");
 
                     level_complete = true;
+
                     $.each(metrics, function (m, a){
                         if (m != "order"){
                             level_item_icon = $("<i>");
@@ -420,7 +436,7 @@ if (!doNotTrack) {
 
                             level_item = $("<div>")
                             level_item.append(level_item_icon);
-                            level_item.append($("<span>").html(" " + m + "<br/>"));
+                            level_item.append($("<span>").html(" " + m  + "<br/>"));
 
                             level_metrics.append(level_item);
 
@@ -456,6 +472,9 @@ if (!doNotTrack) {
                             case "Pinning Frequency":
                                 src = "/images/badge-strategist-2.png";
                                 break;
+                            case "Blogging Superstar":
+                                src = "/images/badge-superstar.png";
+                                break;
                             default:
                                 src = "";
                                 break;
@@ -465,7 +484,8 @@ if (!doNotTrack) {
                         $("#badges").append(badge);
                     }
 
-                })
+                }
+
                 recommendationsElement.append(carouselitem);
                 $("#currentLevel").text("BADGES: " + num_badges_earned);
 
@@ -479,7 +499,27 @@ if (!doNotTrack) {
                     subtitle = $("<p>");
                     $.each(r.value, function (index, v){
                         value_item = $("<span>");
-                        value_item.html(v + "<br/>");
+                        value_item.html(v.value);
+
+                        if (v.examples.length > 0){
+                            examples = $("<ul>");
+
+                            $.each(v.examples, function (i, e){
+                                li = $("<li>");
+                                link = $("<a>");
+                                link.attr("href", e.url);
+                                link.attr("target", "_blank");
+                                link.text(e.text);
+                                li.append(link);
+                                examples.append(li);
+                            });
+
+                            value_item.append(examples);
+                        }
+                        else{
+                            value_item.append($("<br/>"));
+                        }
+
                         subtitle.append(value_item);
                     });
                     metric.append(subtitle);
@@ -552,10 +592,18 @@ if (!doNotTrack) {
 
                 
                 $("#boardRows").empty();
-                $.each(report.boards, function (index, board){
+                sortedboards = report.boards.sort(function(a, b){
+                    aName = a.name.toLowerCase();
+                    bName = b.name.toLowerCase();
+                    return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
+                })
+
+                console.log(sortedboards)
+
+                $.each(sortedboards, function (index, board){
 
                     name_cell = $("<td>");
-                    name_element = createTooltip(board.description, true, board.name + "<br/>");
+                    name_element = createTooltip(board.description, true, board.name + " ");
                     name_cell.append(name_element);
 
                     if (board.scan.length > 0){
@@ -666,10 +714,10 @@ if (!doNotTrack) {
     </head>
 
 
-	<body lang='en' class="is-loading">
+    <body lang='en' class="is-loading">
 
-		
-			<div id="wrapper">
+        
+            <div id="wrapper">
 
                 
 <header id="header">
@@ -708,7 +756,7 @@ if (!doNotTrack) {
 
     <ul class="icons">
         
-        <li id="btnLogin"><button type="button" class="button small" data-toggle="modal" data-target="#loginModal">Log In</button></li>
+        <li id="btnLogin"><button type="button" class="button small" onclick="showLogin();">Log In</button></li>
         <li id="btnFreeTrial"><button type="button" class="button primary small" onclick="signup();">Free Trial</button></li>
         <li id="btnLogout" style="display:none;">
             <button type="button" class="button small" onclick="logout(); return false;">
@@ -722,10 +770,10 @@ if (!doNotTrack) {
 
 
 
-				
-					<div id="main">
+                
+                    <div id="main">
 
-						
+                        
                         <section id="signup" style="display: none;">
                              <div id="banner" class="row">
                                 <div class="col-12">
@@ -741,6 +789,7 @@ if (!doNotTrack) {
                                 <div class="col-12">
                                     <button type="button" class="btn btn-pin" onclick="signup();"><i class="fa fa-pinterest"></i> Sign up With Pinterest</button>
                                     <p>Get Started Free Today</p>
+                                    <p>Already a member?  <a href="#" onclick="showLogin(); return false;">Log In now!</a></label>
                                 </div>
                             </div>
                         </section>
@@ -773,6 +822,38 @@ if (!doNotTrack) {
                                 <ul class="actions">
                                     <li>
                                         <input type="submit" value="Complete Sign Up" name="signup" id="signup_button" class="button" onclick="submitSignup(); return false;">
+                                    </li>
+                                </ul>
+                            </form>
+                        </section>
+
+                        <section id="loginSection" style="display: none;">
+                            <form id="loginForm" method="post" action="#">
+                                 <header class="major">
+                                    <h1>Pin Karma</h1>
+                                    <p>Your guide to winning on Pinterest and growing traffic to your blog.</p>
+                                </header>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h2>Log In</h2>
+                                        </div>
+                                    </div>
+                                    <div class="fields row">
+                                          <div class="field col-6">
+                                            <label for="email">Email</label>
+                                            <input type="text" name="email" id="email" />
+                                          </div>
+                                          <div class="field col-6">
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password" id="password" />
+                                          </div>
+                                          <div class="field">
+                                            <label>Not yet a member?  <a href="#" onclick="signup(); return false;" >Sign Up today!</a></label>
+                                          </div>
+                                    </div>
+                                <ul class="actions">
+                                    <li>
+                                        <button type="submit" class="button primary" onclick="login(); return false;">Log In</button>
                                     </li>
                                 </ul>
                             </form>
@@ -939,7 +1020,7 @@ if (!doNotTrack) {
                                 </div>
                             </div>
                         </section> 
-					</div>
+                    </div>
 
                     
 
@@ -1063,39 +1144,6 @@ if (!doNotTrack) {
                     initializePage();
                 });
             </script>
-	</body>
-
-    
-<div class="modal fade" id="loginModal" tabindex="1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="loginModalLabel">Log In</h2>
-      </div>
-      <div class="modal-body">
-        <form method="post" action="#" id="loginForm">
-          <div class="fields">
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-              </div>
-              <div class="field">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
-              </div>
-              <div class="field">
-                <label>Not a member?  <a href="#" onclick="signup(); return false;" data-dismiss="modal" >Sign Up today!</a></label>
-              </div>
-          </div>
-        </form>  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="button small" data-dismiss="modal">Close</button>
-        <button type="button" class="button primary small" onclick="login(); return false;">Log In</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+    </body>
 
 </html>
