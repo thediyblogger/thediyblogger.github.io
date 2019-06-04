@@ -216,8 +216,6 @@ if (!doNotTrack) {
             }
 
             function storeSession(session){
-                console.log("session", session);
-
                 
                 localStorage.setItem('pinkarma_token', JSON.stringify(session));
 
@@ -455,7 +453,6 @@ if (!doNotTrack) {
                         
                         badge = $("<img>")
 
-                        console.log(level)
                         switch (level){
                             case "Account Basics":
                                 src = "/images/badge-account-basics.png";
@@ -597,8 +594,6 @@ if (!doNotTrack) {
                     bName = b.name.toLowerCase();
                     return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
                 })
-
-                console.log(sortedboards)
 
                 $.each(sortedboards, function (index, board){
 
@@ -875,33 +870,17 @@ if (!doNotTrack) {
                         
                         <section id="engagementResults" style="display: none;">
                             <div class="row">
-                                <div class="col-3 box">
-                                    <h2 id="currentLevel"></h2>
-                                    
-                                    <header class="activity_score">
-                                        <h1 id="current_score"></h1>
-                                        <p>Total Points (<span id="current_score_pct"></span>%)</p>
+                                <div id="missions" class="col-12 box">
+                                    <header>
+                                        <h2 id="missionHeader">Your Missions:</h2>
+                                        
                                     </header>
-                                    
-                                    <div id="badges" class="badges">
-                                        
-                                    </div>
+                                    <div id="badges" class="badges"></div>
 
-                                    <div class="activity_buttons">
+                                    <div id="carousel" class="carousel slide" data-interval="false" data-ride="carousel">
                                         
-                                            <button id="btnForceRefresh" onclick="forceRefresh(); return false;">Refresh Report</button>
-                                    </div>
-                                </div>
-                                <div id="missions" class="col-9">
-                                    <div class="box">
-                                        <header>
-                                            <h2 id="missionHeader">Your Missions:</h2>
-                                        </header>
-                                        <div id="carousel" class="carousel slide" data-ride="carousel">
                                             
-                                                
-                                            
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
