@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pinterest Tips on The DIY Blogger</title>
+    <link>https://www.thediyblogger.com/categories/pinterest-tips/</link>
+    <description>Recent content in Pinterest Tips on The DIY Blogger</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.thediyblogger.com/categories/pinterest-tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to claim your website on Pinterest</title>
+      <link>https://www.thediyblogger.com/blog/how-to-claim-your-website-on-pinterest/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 -0400</pubDate>
+      
+      <guid>https://www.thediyblogger.com/blog/how-to-claim-your-website-on-pinterest/</guid>
+      <description>Why should I claim my website on Pinterest? Claiming your website on Pinterest is a very important step on your way to driving crazy traffic to your website. You need to have a claimed (and verified) website before you can apply for Rich Pins on your site. You need a claimed website to also gain invaluable analytics from Pinterest about how pins are doing sending traffic to your website. This data can be used to make critical decisions on how to build and target your future pins to drive more traffic.</description>
+    </item>
+    
+  </channel>
+</rss>
