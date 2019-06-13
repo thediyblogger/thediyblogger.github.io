@@ -421,6 +421,7 @@ if (!doNotTrack) {
 
                     $.each(metrics, function (m, a){
                         if (m != "order"){
+
                             level_item_icon = $("<i>");
                             level_item_icon.addClass("fa");
                             level_item_icon.attr("aria-hidden", true);
@@ -434,7 +435,8 @@ if (!doNotTrack) {
 
                             level_item = $("<div>")
                             level_item.append(level_item_icon);
-                            level_item.append($("<span>").html(" " + m  + "<br/>"));
+
+                            level_item.append($("<span>").html(" " + m  +  "<br/>"));
 
                             level_metrics.append(level_item);
 
@@ -1066,8 +1068,8 @@ if (!doNotTrack) {
 <div id="copyright">
     <ul>
     	<li><a href="/" title="The DIY Blogger">&copy; 2019 The DIY Blogger</a></li>
-    	<li><a href="/blog/privacy-policy" title="Terms and Privacy">Terms and Privacy</a></li>
-    	<li><a href="/blog/attributions" title="Attributions">attributions</a></li>
+    	<li><a href="/privacy-policy" title="Terms and Privacy">Terms and Privacy</a></li>
+    	<li><a href="/attributions" title="Attributions">attributions</a></li>
 	</ul>
 </div>
 

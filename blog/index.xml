@@ -169,23 +169,5 @@ When you visit your bank website, or these days even Facebook and Google, you wi
   Address Bar   When your users go to a URL such as &amp;ldquo;www.drawbuildplay.com&amp;rdquo;, the request will go to a DNS server which routes the request to the correct place where your website is hosted. Think of it like regular mail you send through the post office. You send a letter marked with the recipients address.</description>
     </item>
     
-    <item>
-      <title>Attributions</title>
-      <link>https://www.thediyblogger.com/blog/attributions/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.thediyblogger.com/blog/attributions/</guid>
-      <description> Attributions  Hugo Design: https://html5up.net/massively Hugo Port: https://curtistimson.co.uk/post/project/massively-hugo-theme/ Infrastructure: https://aws.amazon.com/  </description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>https://www.thediyblogger.com/blog/privacy-policy/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.thediyblogger.com/blog/privacy-policy/</guid>
-      <description>PERSONAL INFORMATION WE COLLECT When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site.</description>
-    </item>
-    
   </channel>
 </rss>
