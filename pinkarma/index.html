@@ -164,7 +164,7 @@ if (!doNotTrack) {
 
 								<div class="row">
 									<div class="col-12">
-										<a href="/dashboard" class="button primary">Join Pin Karma</a>
+										<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'Join Pin Karma Banner');">Join Pin Karma</button>
 									</div>
 								</div>
 
@@ -232,7 +232,7 @@ if (!doNotTrack) {
 
 								<div class="row">
 									<div class="col-12">
-										<a href="/dashboard" class="button primary">Join Pin Karma</a>
+										<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'Join Pin Karma Lead');">Join Pin Karma</button>
 									</div>
 								</div>
 							</div>
@@ -286,7 +286,7 @@ if (!doNotTrack) {
 					              <li><span class="fa-li"><i class="fa fa-check"></i></span>Pin Analytics <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Coming Soon"></i></li>
 					              <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Machine Learning <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Not Yet Available"></i></li>
 					            </ul>
-					            <a href="/dashboard" class="button primary">Free for a limited time</a>
+					            <button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'PinKarma Plus');">Free for a limited time</button>
 					          </div>
 					        </div>
 					      </div>
@@ -355,6 +355,7 @@ if (!doNotTrack) {
 	</ul>
 </div>
 
+
 			</div>
 
 			
@@ -405,6 +406,74 @@ if (!doNotTrack) {
 
 
 <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us7.list-manage.com","uuid":"12399181fb539534b4cf8657c","lid":"4164d441fe","uniqueMethods":true}) })</script>
+        	
+<div class="modal fade" id="signupModal" tabindex="1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Join Pin Karma</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12">
+            <p>Pin Karma is currently invite only.  Enter your email below to reserve your free spot and be notified of our latest releases!</p>
+            <p>As a welcome, we will send you our free Pinterest Audit Checklist, and our strategies to get you going on your marketing journey.</p>
+          </div>
+        </div>
+         <div class="row leadgen">
+          <div class="col-md-4">
+            <img src="/images/pin-karma-cover.png" />
+          </div>
+          <div class="col-md-8 ml-auto signupFields">
+            
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+               
+            </style>
+            <style type="text/css">
+              #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+            </style>
+
+            <div id="mc_embed_signup">
+            <form action="https://thediyblogger.us7.list-manage.com/subscribe/post?u=12399181fb539534b4cf8657c&amp;id=4164d441fe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>    
+
+                  <div class="mc-field-group">
+                    <input type="text" placeholder="First Name" value="" name="FIRSTNAME" class="required" id="mce-FIRSTNAME">
+                  </div>
+                  <div class="mc-field-group">
+                    <input type="email" placeholder="Email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                  </div>
+                  <div class="mc-field-group input-group" style="display: none;">
+                    <input type="checkbox" value="1" name="group[26057][1]" id="mce-group[26057]-26057-0" checked>
+                    <input type="checkbox" value="2" name="group[26057][2]" id="mce-group[26057]-26057-1" checked>
+                  </div>
+
+                  
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_12399181fb539534b4cf8657c_4164d441fe" tabindex="-1" value=""></div>
+                  <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FIRSTNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
 
 	</body>
 </html>
