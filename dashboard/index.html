@@ -772,13 +772,17 @@ if (!doNotTrack) {
                 $(card_rec).find('.goal').html("<strong>Goal: " + r.level + "</strong>");
 
                 
-                link = $("<a>");
-                link.attr("href", r.link);
-                link.attr("target", "_blank");
-                link.addClass("button");
-                link.text("Learn More");
-                $(card_rec).find('.card-footer').append(link);
-
+                if (r.link !== ""){
+                    link = $("<a>");
+                    link.attr("href", r.link);
+                    link.attr("target", "_blank");
+                    link.addClass("button");
+                    link.text("Learn More");
+                    $(card_rec).find('.card-footer').append(link);
+                }
+                else{
+                    $(card_rec).find('.card-footer').hide()
+                }
 
                 
                 var card_list_template = $("#hidden-card-recommendation-issues-template").html();
@@ -1286,7 +1290,7 @@ if (!doNotTrack) {
             
                 
                 <li class="">
-                    <a title="seo/sem" href="https://www.thediyblogger.com/categories/seo-sem/">seo/sem</a>
+                    <a title="seo/sem" href="https://www.thediyblogger.com/categories/seo/sem/">seo/sem</a>
                 </li>
             
         
