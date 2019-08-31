@@ -33,6 +33,13 @@ if (!doNotTrack) {
 		     'hitCallback': function(){document.location = url;}
 		   });
 		}
+
+
+	    function analyzeUrl(){
+	        var domain = $('#website_domain').val();
+	        document.location.href = "/dashboard?domain=" + domain
+	    }
+
 		</script>
 
 		
@@ -55,9 +62,11 @@ if (!doNotTrack) {
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 		<link rel="stylesheet" href='/assets/css/main.css' />
         <link rel="stylesheet" href='/assets/css/dashboard.css' />
+
+
 		<noscript><link rel="stylesheet" href='/assets/css/noscript.css' /></noscript>
 
 		
@@ -142,13 +151,13 @@ if (!doNotTrack) {
         
 
         <li class=''>
-            <a href='/pinkarma/'>PIN KARMA</a>
+            <a href='/dashboard/'>Tools</a>
         </li>
     </ul>
 
     <ul class="icons">
         
-        <li><a href="/dashboard/" class="button small">Dashboard</a></li>
+        <li><a href="/dashboard/" class="button small">Log In</a></li>
         
 
         
@@ -172,11 +181,11 @@ if (!doNotTrack) {
 								</h2>
 								<p>
 				                    I'm Amit, The DIY Blogger. <br/>
-				                    I can't wait for us to work together to build your blogging business so you can spend more time doing what you love!
+				                    I am here to help you grow your online business so you can spend more time doing what you love!
 			                    </p>
 							</header>
 		                    <p class="subtext">
-			                    My passion over the past 20 years has been to build websites. My latest mission is to empower you to to build and monetize your own website or blog and start to rapidly generate mountains of traffic to your website using secret Pinterest strategies and Google SEO techniques.
+			                    My passion over the past 20 years has been to build websites. My latest mission is to empower you to to build and monetize your own website or blog and start to rapidly grow traffic to your website using secret social media strategies and traditional Google SEO techniques.
 			                </p>
 						</article>
 					</section>
@@ -186,7 +195,7 @@ if (!doNotTrack) {
 						  <div class="carousel-inner">
 						    <div class="carousel-item active">
 					      		<quote>
-					      			<a href="https://www.drawbuildplay.com">DrawBuildPlay</a> boosted their traffic by 600% using these Pinterest Strategies in their first 3 months!
+					      			<a href="https://www.drawbuildplay.com">DrawBuildPlay</a> accelerated their traffic growth by using our tools, and website traffic has doubled every month since May.  They are now on track for 100k page views by September.
 					      		</quote>
 								<p>
 					      			<img src="/images/logo-drawbuildplay.png" />
@@ -201,6 +210,15 @@ if (!doNotTrack) {
 						    		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAQAAADtJZLrAAAAD0lEQVR42mNkYGAcRcQhADxaAGWhD8eHAAAAAElFTkSuQmCC">
 					      		</p>
 						    </div>
+
+						    <div class="carousel-item">
+					      		<quote>
+					      			Most people underestimate the power of social media to promote their content.  While Google is a longer term play, Pinterest and Facebook have the power to drive insane traffic in as little as a few days/weeks.
+					      		</quote>
+					      		<p>
+						    		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAQAAADtJZLrAAAAD0lEQVR42mNkYGAcRcQhADxaAGWhD8eHAAAAAElFTkSuQmCC">
+					      		</p>
+						    </div>
 						  </div>
 						</div>
 					</section>
@@ -210,7 +228,41 @@ if (!doNotTrack) {
 							<div class="col-lg-4">
 						        <div class="card mb-5 mb-lg-0">
 						          	<div class="card-body">
-							          	<h5 class="card-title text-muted text-uppercase text-center">FREE Pinterest Audit Checklist</h5>
+										<h5 class="card-title text-muted text-uppercase text-center">Growva - AI Virtual Assistant</h5>
+							            <h6 class="card-price text-center">Free<span class="period"></span></h6>
+							            <hr>
+										<div class="flip-card">
+										  <div class="flip-card-inner">
+										    <div class="flip-card-front">
+										      <img src="/images/growva-cover.png" />
+										    </div>
+										    <div class="flip-card-back">
+										      <ul class="fa-ul">
+									              <li><span class="fa-li"><i class="fa fa-check"></i></span>SEO Audit</li>
+									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Scans</li>
+									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Growth Recommendations</li>
+									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Page Speed Analysis</li>
+									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Viral Tracking</li>
+									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Trending Content</li>
+									              <li class="text-muted"><span class="fa-li"><i class="fa fa-clock-o"></i></span>AI Forecasting</li>
+									              <li class="text-muted"><span class="fa-li"><i class="fa fa-clock-o"></i></span>Pinterest Audit</li>
+									            </ul>
+										    </div>
+										  </div>
+										</div>
+
+										
+										<hr>
+										<a href="/dashboard" class="button small">Learn More</a>
+								  	</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+							</div>
+							<div class="col-lg-4">
+						        <div class="card mb-5 mb-lg-0">
+						          	<div class="card-body">
+							          	<h5 class="card-title text-muted text-uppercase text-center">Pinterest Audit Checklist</h5>
 							            <h6 class="card-price text-center">Free<span class="period"></span></h6>
 							            <hr>
 
@@ -222,10 +274,10 @@ if (!doNotTrack) {
 										    <div class="flip-card-back">
 										      <ul class="fa-ul">
 									              <li><span class="fa-li"></span>Subscribe if you are:</li>
+									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Wanting free organic traffic</li>
 									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Just starting out with Pinterest</li>
 									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Can't figure out the Pinterest game</li>
 									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Struggling to see results</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Want free organic traffic</li>
 									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Something isn't working right</li>
 									            </ul>
 										    </div>
@@ -238,71 +290,7 @@ if (!doNotTrack) {
 								  	</div>
 								</div>
 							</div>
-							<div class="col-lg-4">
-						        <div class="card mb-5 mb-lg-0">
-						          	<div class="card-body">
-										<h5 class="card-title text-muted text-uppercase text-center">Pin Karma - Online Mentor</h5>
-							            <h6 class="card-price text-center">$5<span class="period">/month</span></h6>
-							            <hr>
-										<div class="flip-card">
-										  <div class="flip-card-inner">
-										    <div class="flip-card-front">
-										      <img src="/images/pin-karma-cover.png" />
-										    </div>
-										    <div class="flip-card-back">
-										      <ul class="fa-ul">
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Automatic Guidance</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Scans</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Recommendations</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Badges</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-									              <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Trending Graphs</li>
-									              <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Smart Loop Suggestions</li>
-									              <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Pin Analytics</li>
-									              <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Machine Learning</li>
-									            </ul>
-										    </div>
-										  </div>
-										</div>
-
-										
-										<hr>
-										<a href="/pinkarma" class="button small">Learn More</a>
-								  	</div>
-								</div>
-							</div>
-							<div class="col-lg-4">
-						        <div class="card mb-5 mb-lg-0">
-						          	<div class="card-body">
-										<h5 class="card-title text-muted text-uppercase text-center">Pin Perfection Course</h5>
-							            <h6 class="card-price text-center">$197</h6>
-							            <hr>
-										
-										<div class="flip-card">
-										  <div class="flip-card-inner">
-										    <div class="flip-card-front">
-												<img src="/images/pin-perfection-course-cover.png" />
-										    </div>
-										    <div class="flip-card-back">
-										      <ul class="fa-ul">
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>13 Modules</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Proven Pinterest Strategies</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Creating Viral Pins</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Secret Pinterest Hacks</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Included: Bonus Material</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Included: 6 month PinKarma Trial</li>
-									              <li><span class="fa-li"><i class="fa fa-check"></i></span>Included: Community Access</li>
-									            </ul>
-										    </div>
-										  </div>
-										</div>
-
-										<hr>
-
-										<a href="https://courses.thediyblogger.com/courses/pin-perfection" target="_blank" class="button small disabled">Coming Soon</a>
-								  	</div>
-								</div>
-							</div>
+							
 						</div>
 					</section>
 
@@ -313,10 +301,10 @@ if (!doNotTrack) {
 							</div>
 							<div class="col-lg-7">
 								<h4>Free Pinterest Audit Checklist</h4>
-								<h2>struggling to get page views?</h2>
+								<h2>Are you missing out on free organic Pinterest traffic?</h2>
 
 								<p>
-									Sign up for our FREE Pinterest Audit Checklist and locate your problems in a few minutes.
+									Sign up for our FREE Pinterest Audit Checklist and get started in a few minutes.
 								</p>
 
 								<div class="row">
@@ -480,22 +468,12 @@ if (!doNotTrack) {
 				
 
 <footer id="footer">
-    <section class="split contact" id="about">
-        
-        <section>
-            
 
-        </section>
-    </section>
-
-    <section class="split contact">
-        <section>
-            <div class="field">
-                <label>Follow me on Pinterest</label>
-                <a data-pin-do="embedBoard" data-pin-board-width="600" data-pin-scale-height="300" data-pin-scale-width="80" href="https://www.pinterest.com/thediyblogger/the-diy-blogger/"></a>
-            </div>
-        </section>
-
+    <section class="contact">
+        <div class="field">
+            <label>Follow The DIY Blogger on Pinterest</label>
+            <a data-pin-do="embedBoard" data-pin-board-width="600" data-pin-scale-height="300" data-pin-scale-width="80" href="https://www.pinterest.com/thediyblogger/the-diy-blogger/"></a>
+        </div>
     </section>
 </footer>
 
@@ -601,9 +579,7 @@ if (!doNotTrack) {
 
 			
 <script src='/assets/js/jquery.min.js'></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
@@ -625,7 +601,6 @@ if (!doNotTrack) {
 	    allPanels.slideDown();
 	    return false;
 	  });
-
 
 	})(jQuery);
 

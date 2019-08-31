@@ -4,7 +4,7 @@
 
 <html lang='en'>
 	<head>
-		<title>PinKarma &middot; The DIY Blogger</title>
+		<title>Growva &middot; The DIY Blogger</title>
 		<meta name="description" content="Your DIY Guide to Building a Blog">
 		<meta name="p:domain_verify" content="33586c70c7c22eb964eecdf59d0cb90e"/>
 		<meta name="msvalidate.01" content="3E5C24AE74957914451DD85E5044D9E0" />
@@ -32,17 +32,24 @@ if (!doNotTrack) {
 		     'hitCallback': function(){document.location = url;}
 		   });
 		}
+
+
+	    function analyzeUrl(){
+	        var domain = $('#website_domain').val();
+	        document.location.href = "/dashboard?domain=" + domain
+	    }
+
 		</script>
 
 		
-	    <meta property="og:title" content="PinKarma">
+	    <meta property="og:title" content="Growva">
 	    
 	    <meta property="og:type" content="article">
 	    <meta property="article:published_time" content="0001-01-01">
 	    <meta property="article:author" content="Amit Gandhi - The DIY Blogger" />
 	    
 	    <meta property="og:description" content="">
-	    <meta property="og:url" content="https://www.thediyblogger.com/pinkarma/">
+	    <meta property="og:url" content="https://www.thediyblogger.com/growva/">
 	    <meta property="og:site_name" content="The DIY Blogger">
 	    
 	    
@@ -56,9 +63,11 @@ if (!doNotTrack) {
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 		<link rel="stylesheet" href='/assets/css/main.css' />
         <link rel="stylesheet" href='/assets/css/dashboard.css' />
+
+
 		<noscript><link rel="stylesheet" href='/assets/css/noscript.css' /></noscript>
 
 		
@@ -127,13 +136,13 @@ if (!doNotTrack) {
         
 
         <li class='active'>
-            <a href='/pinkarma/'>PIN KARMA</a>
+            <a href='/dashboard/'>Tools</a>
         </li>
     </ul>
 
     <ul class="icons">
         
-        <li><a href="/dashboard/" class="button small">Dashboard</a></li>
+        <li><a href="/dashboard/" class="button small">Log In</a></li>
         
 
         
@@ -153,18 +162,18 @@ if (!doNotTrack) {
 							</div>
 							<div class="col-lg-9">
 
-								<h4>Pin Karma</h4>
-								<h2>Can't keep up with your Pinterest Strategy?</h2>
+								<h4>Growva</h4>
+								<h2>Can't keep up with your Blogging Strategy?</h2>
 
 								<p>
-									With Pin Karma, we will monitor your Pinterest account and blog for you, and tell you when you make strategic mistakes, and where to focus your Pinterest and SEO efforts.
+									With Growva, we will assign our AI-powered Virtual Assistant to analyze and monitor your blog for you, and tell you when you make strategic mistakes, and where to focus your traffic generation efforts to grow your blog.
 								</p>
 									
-								<p><i>We are your always on, always watching Pinterest and SEO assistant!!!</i></p>
+								<p><i>We are your always on, always analyzing virtual assistant!!!</i></p>
 
 								<div class="row">
 									<div class="col-12">
-										<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'Join Pin Karma Banner');">Join Pin Karma</button>
+										<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'Join Pin Karma Banner');">Join Growva</button>
 									</div>
 								</div>
 
@@ -173,7 +182,7 @@ if (!doNotTrack) {
 					</section>
 
 					<section class="features">
-						<h2>The smartest way to track your Pinterest Strategy</h2>
+						<h2>The smartest way to track your Growth Strategy</h2>
 
 						<div class="row">
 							<div class="col-lg-4">
@@ -232,7 +241,7 @@ if (!doNotTrack) {
 
 								<div class="row">
 									<div class="col-12">
-										<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'Join Pin Karma Lead');">Join Pin Karma</button>
+										<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'Join Pin Karma Lead');">Join Growva</button>
 									</div>
 								</div>
 							</div>
@@ -319,32 +328,6 @@ if (!doNotTrack) {
 				</div>
 
 				
-
-<footer id="footer">
-    <section class="split contact" id="about">
-        
-        <section>
-            
-
-        </section>
-    </section>
-
-    <section class="split contact">
-        <section>
-            <div class="field">
-                <label>Follow me on Pinterest</label>
-                <a data-pin-do="embedBoard" data-pin-board-width="600" data-pin-scale-height="300" data-pin-scale-width="80" href="https://www.pinterest.com/thediyblogger/the-diy-blogger/"></a>
-            </div>
-        </section>
-
-    </section>
-</footer>
-
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-
-
-				
 <div id="copyright">
     <ul>
     	<li><a href="/" title="The DIY Blogger">&copy; 2019 The DIY Blogger</a></li>
@@ -374,9 +357,7 @@ if (!doNotTrack) {
 
 			
 <script src='/assets/js/jquery.min.js'></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
@@ -398,7 +379,6 @@ if (!doNotTrack) {
 	    allPanels.slideDown();
 	    return false;
 	  });
-
 
 	})(jQuery);
 

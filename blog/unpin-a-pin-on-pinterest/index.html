@@ -32,6 +32,13 @@ if (!doNotTrack) {
 		     'hitCallback': function(){document.location = url;}
 		   });
 		}
+
+
+	    function analyzeUrl(){
+	        var domain = $('#website_domain').val();
+	        document.location.href = "/dashboard?domain=" + domain
+	    }
+
 		</script>
 
 		
@@ -66,9 +73,11 @@ if (!doNotTrack) {
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 		<link rel="stylesheet" href='/assets/css/main.css' />
         <link rel="stylesheet" href='/assets/css/dashboard.css' />
+
+
 		<noscript><link rel="stylesheet" href='/assets/css/noscript.css' /></noscript>
 
 		
@@ -137,13 +146,13 @@ if (!doNotTrack) {
         
 
         <li class=''>
-            <a href='/pinkarma/'>PIN KARMA</a>
+            <a href='/dashboard/'>Tools</a>
         </li>
     </ul>
 
     <ul class="icons">
         
-        <li><a href="/dashboard/" class="button small">Dashboard</a></li>
+        <li><a href="/dashboard/" class="button small">Log In</a></li>
         
 
         
@@ -548,22 +557,12 @@ if (!doNotTrack) {
                     
 
 <footer id="footer">
-    <section class="split contact" id="about">
-        
-        <section>
-            
 
-        </section>
-    </section>
-
-    <section class="split contact">
-        <section>
-            <div class="field">
-                <label>Follow me on Pinterest</label>
-                <a data-pin-do="embedBoard" data-pin-board-width="600" data-pin-scale-height="300" data-pin-scale-width="80" href="https://www.pinterest.com/thediyblogger/the-diy-blogger/"></a>
-            </div>
-        </section>
-
+    <section class="contact">
+        <div class="field">
+            <label>Follow The DIY Blogger on Pinterest</label>
+            <a data-pin-do="embedBoard" data-pin-board-width="600" data-pin-scale-height="300" data-pin-scale-width="80" href="https://www.pinterest.com/thediyblogger/the-diy-blogger/"></a>
+        </div>
     </section>
 </footer>
 
@@ -600,9 +599,7 @@ if (!doNotTrack) {
 
             
 <script src='/assets/js/jquery.min.js'></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
@@ -624,7 +621,6 @@ if (!doNotTrack) {
 	    allPanels.slideDown();
 	    return false;
 	  });
-
 
 	})(jQuery);
 
